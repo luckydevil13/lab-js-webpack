@@ -5,7 +5,7 @@ module.exports = {
 	context: path.resolve(__dirname,'src'),
 
 	// MUST: start point to resolve
-	entry: './js/app.js',
+	entry: './js/app.ts',
 
 	// MUST: result of work
 	output: {
@@ -15,9 +15,16 @@ module.exports = {
 
 	// extensions to work with
 	resolve: {
-		extensions: ['.js']
+		extensions: ['.ts','.js']
 	},
 
 	// Watch the filesystem for changes
-	watch: false
+	watch: false,
+
+	module: {
+		rules:[{
+			test: /\.ts/,
+			loader: 'awesome-typescript-loader'
+		}]
+	}
 }
