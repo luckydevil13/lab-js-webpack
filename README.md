@@ -20,5 +20,5 @@ This is webpack v2 lab
 Now we could you webpack-dev-server
 
 Use npm run dev - for dev environment
-Use npm run prod - for prod environment
 
+Use npm run prod - for prod environment
