@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/luckydevil13/lab-js-webpack#readme",
   "devDependencies": {
+    "awesome-typescript-loader": "^3.0.7",
+    "css-loader": "^0.26.1",
+    "sass-loader": "^6.0.2",
+    "typescript": "^2.2.1",
     "webpack": "^2.2.1"
   },
   "dependencies": {
