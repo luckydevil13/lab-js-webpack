@@ -15,5 +15,6 @@ This is webpack v2 lab
 + install external libs for webpack
 	- npm install webpack-dev-server --save-dev 
 	- npm install typescript awesome-typescript-loader --save-dev 
-	- npm install css-loader sass-loader --save-dev
+	- npm install css-loader sass-loader sass style-loader css-loader --save-dev
+
 
