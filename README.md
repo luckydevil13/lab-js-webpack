@@ -17,4 +17,4 @@ This is webpack v2 lab
 	- npm install typescript awesome-typescript-loader --save-dev 
 	- npm install css-loader sass-loader sass style-loader css-loader --save-dev
 
-
+Now we could you webpack-dev-server

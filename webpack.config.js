@@ -19,11 +19,11 @@ module.exports = {
 
     // extensions to work with
     resolve: {
-        extensions: ['.ts','.sass']
+        extensions: ['.ts','.sass','.js']
     },
 
     // Watch the filesystem for changes
-    watch: false,
+    watch: true,
 
     module: {
         rules: 
@@ -49,5 +49,5 @@ module.exports = {
     // Output of ExtractTextPlugin to styles.css
     plugins: [
         new ExtractTextPlugin("styles.css"),
-    ]
+    ],
 }
