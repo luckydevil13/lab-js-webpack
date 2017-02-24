@@ -28,11 +28,13 @@ module.exports = {
     module: {
         rules: 
         [
+        	// webpack only works with javascript, so to support ts - we use loader
         	{
             	test: /\.ts$/,
             	loader: 'awesome-typescript-loader'
         	},
 
+        	// for sass use ExtractTextPlugin - combine all style files in one, css-loader - use to load styles to DOM
         	{
 		        test: /\.sass$/,
 		        use: ExtractTextPlugin.extract({
@@ -44,11 +46,8 @@ module.exports = {
 
     },
 
+    // Output of ExtractTextPlugin to styles.css
     plugins: [
         new ExtractTextPlugin("styles.css"),
     ]
-
-    
-
-
 }
