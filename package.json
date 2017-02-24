@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This is webpack v2 lab",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "webpack --config ./webpack.prod.config.js",
+    "dev": "webpack --config ./webpack.dev.config.js"
   },
   "repository": {
     "type": "git",

@@ -18,3 +18,7 @@ This is webpack v2 lab
 	- npm install css-loader sass-loader sass style-loader css-loader --save-dev
 
 Now we could you webpack-dev-server
+
+Use npm run dev - for dev environment
+Use npm run prod - for prod environment
+
