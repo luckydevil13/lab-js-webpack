@@ -1,10 +1,10 @@
-class Greeter {
-    constructor(public greeting: string) { }
-    greet() {
-        return "<h1>" + this.greeting + "</h1>";
+class ShowTitle {
+    constructor(public title: string) { }
+    show() {
+        return "<h1>" + this.title + "</h1>";
     }
 };
 
-var greeter = new Greeter("Hello, world!");
+var title = new ShowTitle(window.document.title);
     
-document.body.innerHTML = greeter.greet();
+document.body.innerHTML = title.show();
