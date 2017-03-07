@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is webpack v2 lab",
   "scripts": {
-    "build:prod": "webpack --config ./configs/webpack.prod.config.js",
-    "build:dev": "webpack --config ./configs/webpack.dev.config.js",
+    "build:prod": "webpack --env prod",
+    "build:dev": "webpack --env dev",
     "lint": "./node_modules/.bin/tslint \"src/**/*.ts\"",
     "app": "webpack-dev-server --config ./configs/webpack.dev.config.js --open --progress --profile --watch --content-base build/"
   },
@@ -25,6 +25,7 @@
     "awesome-typescript-loader": "^3.0.7",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "ng2lint": "0.0.10",
     "node-sass": "^4.5.0",
     "sass": "^0.5.0",
     "sass-loader": "^6.0.2",

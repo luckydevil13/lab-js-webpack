@@ -1,17 +1,16 @@
 import "../style/style.scss";
 
 class App {
-    title: string;
+    private title: string;
 
     constructor(name: string) {
         this.title = name;
     }
 
-    showTitle(): string {
+    public showTitle(): string {
         return this.title;
     }
 };
 
-let app = new App("D3 Lab");
+let app: any = new App("D3 Lab");
 document.getElementById("appName").innerHTML = app.showTitle();
-
