@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "This is webpack v2 lab",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "webpack --config ./webpack.prod.config.js",
-    "dev": "webpack --config ./webpack.dev.config.js"
+    "build:prod": "webpack --config ./configs/webpack.prod.config.js",
+    "build:dev": "webpack --config ./configs/webpack.dev.config.js",
+    "lint": "./node_modules/.bin/tslint \"src/**/*.ts\"",
+    "app": "webpack-dev-server --config ./configs/webpack.dev.config.js --open --progress --profile --watch --content-base build/"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,11 @@
     "sass": "^0.5.0",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.13.1",
+    "tslint": "^4.5.1",
+    "tslint-loader": "^3.4.3",
     "typescript": "^2.2.1",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
-  },
-  "dependencies": {
-    "webpack-dev-server": "^2.4.1"
+    "webpack-dev-server": "^2.4.1",
+    "webpack-merge": "^4.0.0"
   }
 }

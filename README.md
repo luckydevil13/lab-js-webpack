@@ -15,10 +15,14 @@ This is webpack v2 lab
 + install external libs for webpack
 	- npm install webpack-dev-server --save-dev 
 	- npm install typescript awesome-typescript-loader --save-dev 
-	- npm install css-loader sass-loader sass style-loader css-loader --save-dev
+	- npm install css-loader sass-loader sass style-loader css-loader tslint --save-dev
 
 Now we could you webpack-dev-server
 
-Use npm run dev - for dev environment
+Use npm run build:dev - for build dev bundle
 
-Use npm run prod - for prod environment
+Use npm run build:prod - for build prod bundle
+
+Use npn run lint - for linting Typescript
+
+Use npm run app - for run webpack dev server

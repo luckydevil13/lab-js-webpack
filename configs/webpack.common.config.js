@@ -1,25 +1,25 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+
 module.exports = {
     // start point to resolve dependencies 
-    context: path.resolve(__dirname, 'src'),
+    context: path.resolve(__dirname, '../src'),
 
     // MUST: start point to resolve
     entry: {
-        app: './js/app.ts',
-        style: './style/style.sass'
+        app: './app/app.ts',
     },
 
     // MUST: result of work
     output: {
         filename: "[name].js",
-        path: path.resolve(__dirname, 'build')
+        path: path.resolve(__dirname, '../build')
     },
 
     // extensions to work with
     resolve: {
-        extensions: ['.ts','.sass','.js']
+        extensions: ['.ts','.scss','.js']
     },
 
     // Watch the filesystem for changes
@@ -31,12 +31,14 @@ module.exports = {
         	// webpack only works with javascript, so to support ts - we use loader
         	{
             	test: /\.ts$/,
+                enforce: 'pre',
+                loader: 'tslint-loader',
             	loader: 'awesome-typescript-loader'
         	},
 
         	// for sass use ExtractTextPlugin - combine all style files in one, css-loader - use to load styles to DOM
         	{
-		        test: /\.sass$/,
+		        test: /\.scss$/,
 		        use: ExtractTextPlugin.extract({
 		          fallback: 'style-loader',
 		          use: ['css-loader', 'sass-loader']
